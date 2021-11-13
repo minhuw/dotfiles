@@ -86,7 +86,7 @@ plugins=(
     cargo
     python
     pyenv
-    osx
+    macos
     iterm2
 )
 
