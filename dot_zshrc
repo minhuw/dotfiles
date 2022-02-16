@@ -83,7 +83,7 @@ plugins=(
     zsh-autosuggestions
     zsh-completions
     brew
-    cargo
+    rust
     python
     pyenv
     macos
