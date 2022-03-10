@@ -5,3 +5,6 @@ install-rust:
 install-pyenv:
 	curl https://pyenv.run | bash
 
+install-brew:
+	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
+
