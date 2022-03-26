@@ -8,3 +8,5 @@ install-pyenv:
 install-brew:
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 
+install-docker-compose:
+	~/scripts/install_docker_compose.sh
