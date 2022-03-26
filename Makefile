@@ -10,3 +10,6 @@ install-brew:
 
 install-docker-compose:
 	~/scripts/install_docker_compose.sh
+
+install-docker:
+	~/scripts/install_docker.sh
