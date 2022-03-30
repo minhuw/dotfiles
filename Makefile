@@ -9,7 +9,7 @@ install-brew:
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 
 install-docker-compose:
-	~/scripts/install_docker_compose.sh
+	sudo ~/scripts/install_docker_compose.sh
 
 install-docker:
-	~/scripts/install_docker.sh
+	sudo ~/scripts/install_docker.sh
