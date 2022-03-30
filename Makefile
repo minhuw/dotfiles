@@ -4,6 +4,13 @@ install-rust:
 
 install-pyenv:
 	curl https://pyenv.run | bash
+	sudo apt-get install -y zlib1g-dev libbz2-dev libssl-dev libffi-dev libreadline-dev libsqlite3-dev
+
+install-meson:
+	pip install --user meson
+
+install-ninja:
+	sudo ~/scripts/install_ninja.sh
 
 install-brew:
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
