@@ -10,13 +10,13 @@ install-meson:
 	pip install --user meson
 
 install-ninja:
-	sudo ~/scripts/install_ninja.sh
+	sudo ~/.scripts/install_ninja.sh
 
 install-brew:
 	curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh | bash
 
 install-docker-compose:
-	sudo ~/scripts/install_docker_compose.sh
+	sudo ~/.scripts/install_docker_compose.sh
 
 install-docker:
-	sudo ~/scripts/install_docker.sh
+	sudo ~/.scripts/install_docker.sh
