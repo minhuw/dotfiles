@@ -2,6 +2,9 @@ install-rust:
 	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 	rustup toolchain add nightly
 
+install-haskell:
+	curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+
 install-pyenv:
 	curl https://pyenv.run | bash
 	sudo apt-get install -y zlib1g-dev libbz2-dev libssl-dev libffi-dev libreadline-dev libsqlite3-dev
