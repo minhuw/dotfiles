@@ -1,3 +1,5 @@
+zstyle ':omz:update' mode disabled
+
 . "$HOME/.cargo/env"
 
 export PYENV_ROOT="$HOME/.pyenv"
