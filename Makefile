@@ -23,3 +23,6 @@ install-docker-compose:
 
 install-docker:
 	sudo ~/.scripts/install_docker.sh
+
+install-aws-cli:
+	sudo ~/.scripts/install_aws_cli.sh
