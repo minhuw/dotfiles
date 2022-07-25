@@ -9,6 +9,9 @@ install-pyenv:
 	curl https://pyenv.run | bash
 	sudo apt-get install -y zlib1g-dev libbz2-dev libssl-dev libffi-dev libreadline-dev libsqlite3-dev
 
+install-pdm:
+	curl -sSL https://raw.githubusercontent.com/pdm-project/pdm/main/install-pdm.py | python3 -
+
 install-meson:
 	pip install --user meson
 
