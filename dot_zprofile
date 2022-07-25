@@ -10,6 +10,10 @@ if [ -d "$HOME/.pyenv" ]; then
   eval "$(pyenv init --path)"
 fi
 
+if [ -f "$HOME/.local/bin/pdm" ]; then
+    eval "$(pdm --pep582)"
+fi
+
 if [[ $OSTYPE == 'darwin'* ]]; then
   if [ -f "/usr/local/bin/brew" ]; then
     eval "$(/usr/local/bin/brew  shellenv)"
