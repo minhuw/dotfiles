@@ -11,7 +11,7 @@ if [ -d "$HOME/.pyenv" ]; then
 fi
 
 if [ -f "$HOME/.local/bin/pdm" ]; then
-    eval "$(pdm --pep582)"
+    eval "$($HOME/.local/bin/pdm --pep582)"
 fi
 
 if [[ $OSTYPE == 'darwin'* ]]; then
