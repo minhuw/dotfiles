@@ -2,4 +2,5 @@
 	name = minhuw
 	email = wangmh15@gmail.com
 [core]
-	excludesfile = /Users/minhuw/.gitignore
+	excludesfile = ~/.gitignore
+	editor = vim
