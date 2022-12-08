@@ -18,6 +18,8 @@ if [ -d "$HOME/.pyenv" ]; then
   eval "$(pyenv init -)"
 fi
 
-if [ -f "$HOME/.pyenv/shims/pdm" ]; then
+if [ -f "$HOME/.local/bin/pdm" ]; then
+  eval "$($HOME/.local/bin/pdm --pep582)"
+elif [ -f "$HOME/.pyenv/shims/pdm" ]; then
   eval "$($HOME/.pyenv/shims/pdm --pep582)"
 fi
