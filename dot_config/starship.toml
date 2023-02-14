@@ -1,6 +1,7 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# Which is equivalent to
 format = """
 $username\
 $hostname\
@@ -72,7 +73,6 @@ $crystal\
 $custom\
 $sudo\
 $cmd_duration\
-$fill\
 $time\
 $line_break\
 $jobs\
@@ -87,14 +87,18 @@ $character"""
 add_newline = true
 
 [fill]
-symbol = ' '
+symbol = '-'
 
 [time]
 disabled = false
+format = ' 🕙 [\[ $time \]]($style)'
+
+[git_metrics]
+disabled = false
 
 [username]
-show_always = true
 format = '[$user]($style)@'
 
 [hostname]
 ssh_only = false
+format = '[$hostname]($style) in '
