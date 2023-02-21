@@ -34,3 +34,9 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "24h"
+[".tmux/plugins/tpm"]
+    type = "archive"
+    url = "https://github.com/tmux-plugins/tpm/archive/master.tar.gz"
+    exact = true
+    stripComponents = 1
+    refreshPeriod = "24h"
