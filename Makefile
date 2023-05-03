@@ -29,3 +29,6 @@ install-docker:
 
 install-aws-cli:
 	sudo ~/.scripts/install_aws_cli.sh
+
+install-fish:
+	sudo ~/.scripts/install_fish.sh
