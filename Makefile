@@ -32,3 +32,9 @@ install-aws-cli:
 
 install-fish:
 	sudo ~/.scripts/install_fish.sh
+
+install-starship:
+	curl -sS https://starship.rs/install.sh | sh
+
+install-cmake:
+	sudo ~/.scripts/install_cmake.sh
