@@ -1,8 +1,10 @@
 call plug#begin()
 
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sensible'
 Plug 'itchyny/lightline.vim'
 Plug 'lervag/vimtex'
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
 
