@@ -1,0 +1,8 @@
+{
+    "defaultConfig": {
+        "customStyles": {
+            "fontFamily": "JuliaMono",
+            "fontSize": 13,
+        }
+    }
+}
