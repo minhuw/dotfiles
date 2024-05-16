@@ -91,7 +91,15 @@ symbol = '-'
 
 [time]
 disabled = false
-format = ' 🕙 [\[ $time \]]($style)'
+format = ' [\[ ⏰ $time \]]($style)'
+
+[git_commit]
+commit_hash_length = 16
+tag_disabled = false
+only_detached = false
+
+[buf]
+disabled = true
 
 [git_metrics]
 disabled = false
@@ -102,3 +110,9 @@ format = '[$user]($style)@'
 [hostname]
 ssh_only = false
 format = '[$hostname]($style) in '
+
+[os]
+disabled = false
+
+[aws]
+disabled = true
