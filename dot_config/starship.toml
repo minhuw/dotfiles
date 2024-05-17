@@ -89,6 +89,10 @@ add_newline = true
 [fill]
 symbol = '-'
 
+[localip]
+disabled = false
+format = ' [\[$localipv4\]]($style) '
+
 [time]
 disabled = false
 format = ' [\[ ⏰ $time \]]($style)'
@@ -109,7 +113,7 @@ format = '[$user]($style)@'
 
 [hostname]
 ssh_only = false
-format = '[$hostname]($style) in '
+format = '[$hostname]($style)'
 
 [os]
 disabled = false
