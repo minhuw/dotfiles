@@ -40,10 +40,4 @@
     exact = true
     stripComponents = 1
     refreshPeriod = "24h"
-[".config/alacritty/themes"]
-    type = "archive"
-    url = "https://github.com/alacritty/alacritty-theme/archive/master.tar.gz"
-    exact = true
-    stripComponents = 1
-    refreshPeriod = "24h"
 
