@@ -113,7 +113,8 @@ format = '[$user]($style)@'
 
 [hostname]
 ssh_only = false
-format = '[$hostname]($style)'
+format = '[\[$ssh_symbol$hostname\]]($style) in '
+ssh_symbol = '🌏 '
 
 [os]
 disabled = false
