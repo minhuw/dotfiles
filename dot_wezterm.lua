@@ -5,10 +5,10 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
-config.font = wezterm.font("Cascadia Code")
-config.font_size = 13
+config.font = wezterm.font("SF Mono", { weight = 'DemiBold'})
+config.font_size = 12
 
-config.color_scheme = 'PencilDark'
+config.color_scheme = 'Bluloco Zsh Light (Gogh)'
 
 config.enable_tab_bar = true 
 config.tab_bar_at_bottom = true
