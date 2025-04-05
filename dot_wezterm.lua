@@ -5,8 +5,8 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- This is where you actually apply your config choices
-config.font = wezterm.font("SF Mono", { weight = 'DemiBold'})
-config.font_size = 12
+config.font = wezterm.font("Fira Code", { weight = 'Bold'})
+config.font_size = 11.5
 
 config.color_scheme = 'Bluloco Zsh Light (Gogh)'
 
