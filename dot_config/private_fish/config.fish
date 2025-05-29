@@ -5,4 +5,6 @@ end
 set EDITOR nvim
 
 starship init fish | source
+atuin init fish | source
+
 
