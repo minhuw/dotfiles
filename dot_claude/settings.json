@@ -1,6 +1,19 @@
 {
+  "model": "sonnet",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "curl -s \"http://100.72.224.89:57630/say?text=node%20$(hostname)%20mission%20accomplished.%20Standby\" > /dev/null 2>&1 || true"
+          }
+        ]
+      }
+    ]
+  },
   "statusLine": {
-    "type": "command", 
+    "type": "command",
     "command": "npx -y @owloops/claude-powerline@latest --style=powerline"
   }
 }
