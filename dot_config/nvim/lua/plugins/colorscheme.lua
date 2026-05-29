@@ -1,15 +1,18 @@
 return {
   {
-    "uloco/bluloco.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
     lazy = false,
     priority = 1000,
-    dependencies = { "rktjmp/lush.nvim" },
+    opts = {
+      flavour = "latte",
+    },
   },
 
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "bluloco-light",
+      colorscheme = "catppuccin-latte",
     },
   },
 }
