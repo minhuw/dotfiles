@@ -4,7 +4,7 @@
 # Two-line prompt. No Nerd Fonts — Ghostty uses Google Sans Code.
 # Always-on: host, path, git branch/status, prompt.
 # Appear only when useful: rebase state, detached SHA, long command,
-# failed exit, extra jobs, sudo, toolchains, nested shells.
+# failed exit, extra jobs, toolchains, nested shells.
 format = """
 $username\
 $hostname\
@@ -26,7 +26,6 @@ $bun\
 $python\
 $rust\
 $package\
-$sudo\
 $jobs\
 $status\
 $time"""
@@ -123,11 +122,6 @@ style = "red"
 number_threshold = 1
 format = "[jobs $number]($style) "
 style = "peach"
-
-[sudo]
-disabled = false
-format = "[sudo]($style) "
-style = "red"
 
 [shlvl]
 disabled = false
