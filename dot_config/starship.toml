@@ -63,7 +63,7 @@ style_root = "bold red"
 
 [hostname]
 ssh_only = false
-format = "[$hostname]($style) "
+format = "[\\[$hostname\\]]($style) "
 style = "green"
 
 [directory]
