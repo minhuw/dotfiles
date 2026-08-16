@@ -57,7 +57,6 @@ crust = "#dce0e8"
 style = "bold blue"
 truncation_length = 3
 truncate_to_repo = true
-fish_style_pwd_dir_length = 1
 format = "[$path]($style)[$read_only]($read_only_style) "
 read_only = " ro"
 
