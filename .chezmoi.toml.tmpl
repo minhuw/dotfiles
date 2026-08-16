@@ -1,0 +1,15 @@
+# Generated from .chezmoi.toml.tmpl. Machine-local secrets stay out of git.
+
+[edit]
+    command = {{ lookPath "nvim" | quote }}
+
+[add]
+    secrets = "warning"
+
+[git]
+    autoCommit = false
+    autoPush = false
+
+[data]
+    # Values for other templates, e.g. {{ "{{ .email }}" }}
+    email = "wangmh15@gmail.com"
