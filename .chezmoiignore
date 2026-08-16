@@ -1,0 +1,6 @@
+# Repo-only files. Dot directories are already skipped by chezmoi;
+# keep these explicit so a future README or junk file cannot land in $HOME.
+README.md
+.DS_Store
+.claude
+**/.DS_Store
