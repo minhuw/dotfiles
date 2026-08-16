@@ -1,0 +1,16 @@
+[user]
+	name = minhuw
+	email = wangmh15@gmail.com
+[core]
+	excludesfile = ~/.gitignore
+	editor = nvim
+[pull]
+	rebase = true
+{{- if lookPath "gh" }}
+[credential "https://github.com"]
+	helper =
+	helper = !{{ lookPath "gh" }} auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !{{ lookPath "gh" }} auth git-credential
+{{- end }}
