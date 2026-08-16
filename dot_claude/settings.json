@@ -1,7 +1,0 @@
-{
-  "statusLine": {
-    "type": "command",
-    "command": "npx -y ccusage@latest statusline"
-  },
-  "alwaysThinkingEnabled": false
-}
