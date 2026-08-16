@@ -1,0 +1,5 @@
+# Interactive zsh is only a fallback. Login shell is fish, but some
+# apps (Ghostty launched before chsh, Orca) still start /bin/zsh.
+if [[ -o interactive && -x /opt/homebrew/bin/fish ]]; then
+  exec /opt/homebrew/bin/fish
+fi

@@ -1,5 +1,6 @@
 font-size = 12.5
 theme = Catppuccin Latte
 font-family = Google Sans Code
+command = /opt/homebrew/bin/fish
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 
