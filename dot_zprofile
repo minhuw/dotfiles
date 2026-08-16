@@ -1,0 +1,8 @@
+# Keep Homebrew on PATH for zsh fallbacks (IDE terminals, old tabs).
+# Login shell is fish; this file is not the daily interactive config.
+
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x /usr/local/bin/brew ]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
