@@ -1,10 +1,3 @@
 {
-    // Theme
-    // @jupyterlab/apputils-extension:themes
-    // Theme manager settings.
-    // *************************************
-
-    // Scrollbar Theming
-    // Enable/disable styling of the application scrollbars
     "theme-scrollbars": true
 }

@@ -2,7 +2,7 @@
     "defaultConfig": {
         "customStyles": {
             "fontFamily": "JuliaMono",
-            "fontSize": 13,
+            "fontSize": 13
         }
     }
 }
