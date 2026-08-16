@@ -5,19 +5,22 @@ set -eu
 # fish_plugins hash: {{ include "dot_config/private_fish/fish_plugins" | sha256sum }}
 
 if ! command -v fish >/dev/null 2>&1; then
-  echo "fish is not installed; cannot install Fisher plugins" >&2
-  exit 1
+  echo "skip: fish is not installed; not installing Fisher plugins"
+  exit 0
 fi
 
 if ! command -v curl >/dev/null 2>&1; then
-  echo "curl is not installed; cannot bootstrap Fisher" >&2
-  exit 1
+  echo "skip: curl is not installed; not bootstrapping Fisher"
+  exit 0
 fi
 
-fish -c '
+if ! fish -c '
 if not type -q fisher
     curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
 end
 
 fisher update
-'
+'; then
+  echo "warning: Fisher plugin update failed; continuing chezmoi apply" >&2
+  exit 0
+fi
