@@ -12,6 +12,7 @@ $directory\
 $git_branch\
 $git_commit\
 $git_state\
+$git_metrics\
 $git_status\
 $cmd_duration\
 $line_break\
@@ -152,7 +153,10 @@ format = "[go $version](sky) "
 format = "[c $version](overlay2) "
 
 [git_metrics]
-disabled = true
+disabled = false
+format = "([+$added]($added_style) )([-$deleted]($deleted_style) )"
+added_style = "green"
+deleted_style = "red"
 
 [aws]
 disabled = true
