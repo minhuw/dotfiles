@@ -1,123 +1,148 @@
 # Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
+"$schema" = "https://starship.rs/config-schema.json"
 
-# Which is equivalent to
+# Compact two-line prompt. No Nerd Fonts — Ghostty uses Google Sans Code.
 format = """
-$username\
-$hostname\
-$localip\
-$shlvl\
-$singularity\
-$kubernetes\
 $directory\
-$vcsh\
 $git_branch\
-$git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-$hg_branch\
-$docker_context\
-$package\
-$c\
-$cmake\
-$cobol\
-$daml\
-$dart\
-$deno\
-$dotnet\
-$elixir\
-$elm\
-$erlang\
-$golang\
-$guix_shell\
-$haskell\
-$haxe\
-$helm\
-$java\
-$julia\
-$kotlin\
-$lua\
-$nim\
-$nodejs\
-$ocaml\
-$opa\
-$perl\
-$php\
-$pulumi\
-$purescript\
-$python\
-$raku\
-$rlang\
-$red\
-$ruby\
-$rust\
-$scala\
-$swift\
-$terraform\
-$vlang\
-$vagrant\
-$zig\
-$buf\
-$nix_shell\
-$conda\
-$meson\
-$spack\
-$memory_usage\
-$aws\
-$gcloud\
-$openstack\
-$azure\
-$env_var\
-$crystal\
-$custom\
-$sudo\
 $cmd_duration\
-$time\
 $line_break\
-$jobs\
-$battery\
-$status\
-$os\
-$container\
-$shell\
 $character"""
 
-# Inserts a blank line between shell prompts
+right_format = """
+$c\
+$golang\
+$nodejs\
+$bun\
+$python\
+$rust\
+$jobs\
+$status\
+$username\
+$hostname"""
+
 add_newline = true
+palette = "catppuccin_latte"
 
-[fill]
-symbol = '-'
+[palettes.catppuccin_latte]
+rosewater = "#dc8a78"
+flamingo = "#dd7878"
+pink = "#ea76cb"
+mauve = "#8839ef"
+red = "#d20f39"
+maroon = "#e64553"
+peach = "#fe640b"
+yellow = "#df8e1d"
+green = "#40a02b"
+teal = "#179299"
+sky = "#04a5e5"
+sapphire = "#209fb5"
+blue = "#1e66f5"
+lavender = "#7287fd"
+text = "#4c4f69"
+subtext1 = "#5c5f77"
+subtext0 = "#6c6f85"
+overlay2 = "#7c7f93"
+overlay0 = "#9ca0b1"
+surface2 = "#acb0be"
+surface0 = "#ccd0da"
+base = "#eff1f5"
+mantle = "#e6e9ef"
+crust = "#dce0e8"
 
-[localip]
-disabled = false
-format = ' [\[$localipv4\]]($style) '
+[directory]
+style = "bold blue"
+truncation_length = 3
+truncate_to_repo = true
+fish_style_pwd_dir_length = 1
+format = "[$path]($style)[$read_only]($read_only_style) "
+read_only = " ro"
 
-[time]
-disabled = false
-format = ' [\[ ⏰ $time \]]($style)'
+[git_branch]
+symbol = ""
+style = "mauve"
+format = "[$branch(:$remote_branch)]($style) "
 
-[git_commit]
-commit_hash_length = 16
-tag_disabled = false
-only_detached = false
-
-[buf]
-disabled = true
+[git_status]
+style = "red"
+format = "([\\[$all_status$ahead_behind\\]]($style) )"
 
 [git_metrics]
 disabled = false
+format = "([+$added]($added_style) )([-$deleted]($deleted_style) )"
+added_style = "green"
+deleted_style = "red"
+
+[git_commit]
+only_detached = true
+tag_disabled = false
+commit_hash_length = 7
+
+[git_state]
+format = "[$state( $progress_current/$progress_total)]($style) "
+style = "yellow"
+
+[cmd_duration]
+min_time = 2000
+format = "[$duration]($style) "
+style = "yellow"
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](peach)"
 
 [username]
-format = '[$user]($style)@'
+show_always = false
+format = "[$user]($style)@"
+style_user = "green"
+style_root = "bold red"
 
 [hostname]
-ssh_only = false
-format = '[\[$ssh_symbol$hostname\]]($style) in '
-ssh_symbol = '🌏 '
+ssh_only = true
+format = "[$hostname]($style) "
+style = "bold green"
 
-[os]
+[status]
 disabled = false
+format = "[$status]($style) "
+style = "red"
+
+[jobs]
+number_threshold = 1
+format = "[$number]($style) "
+style = "peach"
+
+[nodejs]
+format = "[node $version](green) "
+detect_files = ["package.json", ".node-version", ".nvmrc"]
+
+[bun]
+format = "[bun $version](green) "
+
+[python]
+format = "[py ${version}( $virtualenv)](yellow) "
+
+[rust]
+format = "[rs $version](peach) "
+
+[golang]
+format = "[go $version](sky) "
+
+[c]
+format = "[c $version](overlay2) "
 
 [aws]
+disabled = true
+
+[os]
+disabled = true
+
+[localip]
+disabled = true
+
+[time]
 disabled = true
