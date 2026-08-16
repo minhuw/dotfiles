@@ -1,10 +1,13 @@
 # Get editor completions based on the config schema
 "$schema" = "https://starship.rs/config-schema.json"
 
-# Compact two-line prompt. No Nerd Fonts — Ghostty uses Google Sans Code.
+# Two-line prompt. No Nerd Fonts — Ghostty uses Google Sans Code.
 format = """
+$username\
+$hostname\
 $directory\
 $git_branch\
+$git_commit\
 $git_state\
 $git_metrics\
 $git_status\
@@ -21,8 +24,7 @@ $python\
 $rust\
 $jobs\
 $status\
-$username\
-$hostname"""
+$time"""
 
 add_newline = true
 palette = "catppuccin_latte"
@@ -53,17 +55,35 @@ base = "#eff1f5"
 mantle = "#e6e9ef"
 crust = "#dce0e8"
 
+[username]
+show_always = false
+format = "[$user]($style)@"
+style_user = "green"
+style_root = "bold red"
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) "
+style = "green"
+
 [directory]
 style = "bold blue"
-truncation_length = 3
-truncate_to_repo = true
-format = "[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 5
+truncate_to_repo = false
+format = "in [$path]($style)[$read_only]($read_only_style) "
 read_only = " ro"
+home_symbol = "~"
 
 [git_branch]
 symbol = ""
 style = "mauve"
-format = "[$branch(:$remote_branch)]($style) "
+format = "on [$branch]($style) "
+
+[git_commit]
+only_detached = true
+tag_disabled = false
+commit_hash_length = 7
+format = "[\\($hash$tag\\)]($style) "
 
 [git_status]
 style = "red"
@@ -75,35 +95,25 @@ format = "([+$added]($added_style) )([-$deleted]($deleted_style) )"
 added_style = "green"
 deleted_style = "red"
 
-[git_commit]
-only_detached = true
-tag_disabled = false
-commit_hash_length = 7
-
 [git_state]
 format = "[$state( $progress_current/$progress_total)]($style) "
 style = "yellow"
 
 [cmd_duration]
 min_time = 2000
-format = "[$duration]($style) "
+format = "took [$duration]($style) "
 style = "yellow"
+
+[time]
+disabled = false
+format = "[$time]($style)"
+style = "overlay2"
+time_format = "%H:%M"
 
 [character]
 success_symbol = "[❯](green)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](peach)"
-
-[username]
-show_always = false
-format = "[$user]($style)@"
-style_user = "green"
-style_root = "bold red"
-
-[hostname]
-ssh_only = true
-format = "[$hostname]($style) "
-style = "bold green"
 
 [status]
 disabled = false
@@ -112,7 +122,7 @@ style = "red"
 
 [jobs]
 number_threshold = 1
-format = "[$number]($style) "
+format = "[jobs $number]($style) "
 style = "peach"
 
 [nodejs]
@@ -141,7 +151,4 @@ disabled = true
 disabled = true
 
 [localip]
-disabled = true
-
-[time]
 disabled = true
