@@ -1,0 +1,14 @@
+{
+  "lastChangelogVersion": "0.85.1",
+  "theme": "material-bloom",
+  "packages": [
+    "npm:pi-web-access",
+    "npm:pi-autoresearch",
+    "git:github.com/minhuw/pi-extensions",
+    "git:github.com/DietrichGebert/ponytail",
+    "npm:@ff-labs/pi-fff"
+  ],
+  "defaultProvider": "cliproxyapi",
+  "defaultModel": "gpt-6-astra",
+  "defaultThinkingLevel": "medium"
+}
