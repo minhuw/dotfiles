@@ -10,5 +10,9 @@
   ],
   "defaultProvider": "cliproxyapi",
   "defaultModel": "gpt-6-astra",
-  "defaultThinkingLevel": "medium"
+  "defaultThinkingLevel": "medium",
+  "modelThinkingLevels": {
+    "magpie/codex/gpt-6.1-sol": "high",
+    "magpie/codex/gpt-6-astra": "xhigh"
+  }
 }
